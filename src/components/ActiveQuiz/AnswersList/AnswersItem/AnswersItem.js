@@ -3,7 +3,10 @@ import './AnswersItem.css'
 
 const AnswersItem = props => {
     return(
-        <li className={'AnswersItem'}>
+        <li 
+            className={'AnswersItem'}
+            onClick={() => props.onAnswerClick(props.answer.id)}
+        >
             {props.answer.text}
         </li>
     )
